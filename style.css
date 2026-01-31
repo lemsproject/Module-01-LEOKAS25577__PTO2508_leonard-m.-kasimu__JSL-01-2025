@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6fa;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  background: #fff;
+  padding: 30px 20px;
+  border-right: 1px solid #e5e5e5;
+}
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 700;
+  gap: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+  padding-right: 40px 0;
+}
+.logo div {
+  width: 2px;
+  height: 23px;
+  border-radius: 5px;
+  gap: 3px;
+  padding-right: 6px;
+}
+
+.boards-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: gray;
+  margin-bottom: 11px;
+  text-align: center;
+}
+
+.board-btn {
+  background: #645fc6;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 25px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 11px;
+}
+
+/* MAIN AREA */
+.main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 30px;
+}
+
+.board-header {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 8px;
+  box-shadow: 20px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* COLUMNS */
+.columns {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.column {
+  width: 250px;
+}
+/* COLUMN TITLE */
+.column-title {
+  font-size: 10px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: gray;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* STATUS CIRCLES */
+.circle {
+  width: 12px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.todo {
+  background: #4da8f0;
+}
+.doing {
+  background: #9b5de5;
+}
+.done {
+  background: #45c590;
+}
+
+/* CARDS */
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 15px;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: none; /* Hide sidebar on mobile */
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .board-btn {
+    width: auto;
+  }
+
+  .columns {
+    justify-content: center;
+  }
+}
+/* Additional responsive tuning */
+@media (max-width: 480px) {
+  .column {
+    width: 100%;
+  }
+  .columns {
+    gap: 15px;
+  }
+  .board-header {
+    text-align: center;
+    font-size: 16px;
+  }
+}
